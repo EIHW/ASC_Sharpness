@@ -38,12 +38,13 @@ mpirun -n 1 python plot_surface_folder.py --cuda --partition train --dataset dca
 ```
 
 ## Calculate the sharpness values for a folder of models
+```
 python calculate_curvature_value_folder --cuda --mpi --partition train --dataset dcase --x=-0.25:0.25:3 --dir_type states --data-root /path/to/metadata/ --features /path/to/features/features.csv --model_folder /path/to/pretrained_models/ --xnorm filter --xignore biasbn --ngpu 1 --second_dim --batch_size 16 --n_seeds 10 random_seed 42 --no_random_seed
-
+```
 
 ## Citation
 
-If you find this code useful in your research, please cite:
+If you find this code useful in your research, please also cite the original paper:
 
 ```
 @inproceedings{visualloss,
